@@ -12,7 +12,7 @@ on:
       - main
 
 env:
-  DOCKER_IMAGE_NAME: app260527 # 공통으로 설정해도 됨 (하지만 output도 병행)
+  DOCKER_IMAGE_NAME: app260528 # 공통으로 설정해도 됨 (하지만 output도 병행)
 
 jobs:
   makeTagAndRelease:
@@ -71,7 +71,7 @@ jobs:
 
       - name: export image name
         id: export_image
-        run: echo "image_name=app260527" >> $GITHUB_OUTPUT
+        run: echo "image_name=app260528" >> $GITHUB_OUTPUT
 
       - name: 빌드 앤 푸시
         uses: docker/build-push-action@v3
@@ -93,7 +93,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          instance-ids: "i-0474c64d25e3bc3b7"
+          instance-ids: "i-0f8c7b8fc63cecf48"
           working-directory: /
           comment: Deploy
           command: |
