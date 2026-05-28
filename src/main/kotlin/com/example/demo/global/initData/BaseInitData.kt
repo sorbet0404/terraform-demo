@@ -11,7 +11,6 @@ import org.springframework.cache.annotation.Cacheable
 import org.springframework.transaction.annotation.Transactional
 
 @Configuration
-@Profile("!prod")
 class BaseInitData(
     private val postService: PostService
 ) {
