@@ -12,7 +12,7 @@ on:
       - main
 
 env:
-  DOCKER_IMAGE_NAME: app260528-1 # 공통으로 설정해도 됨 (하지만 output도 병행)
+  DOCKER_IMAGE_NAME: mynewapp # 공통으로 설정해도 됨 (하지만 output도 병행)
 
 jobs:
   makeTagAndRelease:
