@@ -12,7 +12,7 @@ on:
       - main
 
 env:
-  DOCKER_IMAGE_NAME: app260528 # 공통으로 설정해도 됨 (하지만 output도 병행)
+  DOCKER_IMAGE_NAME: app260528-1 # 공통으로 설정해도 됨 (하지만 output도 병행)
 
 jobs:
   makeTagAndRelease:
@@ -93,7 +93,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          instance-ids: "i-0f8c7b8fc63cecf48"
+          instance-ids: "i-023903bad84366993"
           working-directory: /
           comment: Deploy
           command: |
